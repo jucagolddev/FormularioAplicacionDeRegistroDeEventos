@@ -1,95 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción al Evento: CódigoGenial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <style>
-        /* Nuevo esquema de color: Fondo Negro, Texto Blanco, Acentos Rojos */
-        body {
-            /* Fondo Negro Profundo */
-            background-color: #121212;
-            color: #f8f9fa; /* Texto principal Blanco */
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-        .form-container {
-            max-width: 800px;
-            margin: auto;
-            /* Contenedor Gris Oscuro/Negro Suave */
-            background-color: #212529; 
-            padding: 40px;
-            border-radius: 18px; 
-            /* Sombra sutil, manteniéndola oscura */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-        }
-        .section-heading {
-            /* Rojo para el borde y el texto del título de sección */
-            border-left: 5px solid #dc3545; /* Rojo de Bootstrap 'danger' */
-            padding-left: 10px;
-            padding-bottom: 5px;
-            margin-top: 35px;
-            margin-bottom: 25px;
-            color: #dc3545; 
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        /* Estilo para los inputs en modo oscuro */
-        .form-control, .form-select, .form-control:focus, .form-select:focus, .form-control::placeholder {
-            background-color: #343a40; /* Fondo más oscuro para inputs */
-            color: #f8f9fa; /* Texto blanco dentro de inputs */
-            border-color: #495057;
-        }
-        .form-control:focus, .form-select:focus {
-            box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5); /* Sombra roja de enfoque */
-            border-color: #dc3545;
-        }
-        .form-label {
-            color: #f8f9fa; /* Asegura que las etiquetas sean blancas */
-        }
-        
-        /* Botones y acentos */
-        .btn-primary {
-            background-color: #dc3545; /* Botón en Rojo */
-            border-color: #dc3545;
-            transition: background-color 0.3s;
-        }
-        .btn-primary:hover {
-            background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
-            border-color: #c82333;
-        }
-
-        /* Títulos principales */
-        .text-primary {
-            color: #dc3545 !important; /* Título principal en Rojo */
-        }
-        .text-secondary {
-            color: #adb5bd !important; /* Descripción en Gris claro */
-        }
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
     <div class="container">
         <div class="form-container">
             <h1 class="text-center mb-3 text-primary">Formulario de Inscripción</h1>
-            <p class="text-center mb-5 text-secondary">¡Completa tus datos para asegurar tu plaza en el evento de programación más esperado!</p>
+            <p class="text-center mb-5 text-secondary">¡Completa tus datos para asegurar tu plaza en el evento de
+                programación más esperado!</p>
 
-            <form action="procesar_evento.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <form action="procesar_evento.php" method="POST" enctype="multipart/form-data" class="needs-validation"
+                novalidate>
 
                 <h2 class="section-heading">1. Información Personal</h2>
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="nombreCompleto" class="form-label">Nombre completo (*)</label>
-                        <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Tu Nombre" required>
+                        <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto"
+                            placeholder="Tu Nombre" required>
                         <div class="invalid-feedback">Por favor, introduce tu nombre completo.</div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email" class="form-label">Correo electrónico (*)</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="ejemplo@dominio.com" required>
                         <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
                     </div>
                 </div>
@@ -97,7 +40,8 @@
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label for="telefono" class="form-label">Número de teléfono</label>
-                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="(+34) 600-000-000">
+                        <input type="tel" class="form-control" id="telefono" name="telefono"
+                            placeholder="(+34) 600-000-000">
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="fechaNacimiento" class="form-label">Fecha de nacimiento (*)</label>
@@ -107,7 +51,8 @@
                     <div class="col-md-4 mb-3">
                         <label class="form-label d-block">Género</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="generoM" value="Masculino" checked>
+                            <input class="form-check-input" type="radio" name="genero" id="generoM" value="Masculino"
+                                checked>
                             <label class="form-check-label" for="generoM">Masculino</label>
                         </div>
                         <div class="form-check form-check-inline">
@@ -139,7 +84,8 @@
                 <div class="mb-3">
                     <label class="form-label d-block">Preferencias de comida (*)</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaVeggie" value="Vegetariano">
+                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaVeggie"
+                            value="Vegetariano">
                         <label class="form-check-label" for="comidaVeggie">Vegetariano</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -147,15 +93,16 @@
                         <label class="form-check-label" for="comidaVegan">Vegano</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaGluten" value="Sin gluten">
+                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaGluten"
+                            value="Sin gluten">
                         <label class="form-check-label" for="comidaGluten">Sin gluten</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaNoPref" value="Sin preferencias" checked>
+                        <input class="form-check-input" type="checkbox" name="comida[]" id="comidaNoPref"
+                            value="Sin preferencias" checked>
                         <label class="form-check-label" for="comidaNoPref">Sin preferencias</label>
                     </div>
                 </div>
-
 
                 <h2 class="section-heading">3. Información de Acceso</h2>
                 <div class="row">
@@ -171,37 +118,45 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="confirmPassword" class="form-label">Confirmación de contraseña (*)</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                            required>
                         <div class="invalid-feedback">Confirma tu contraseña.</div>
                     </div>
                 </div>
 
                 <h2 class="section-heading">4. Preferencias y Acuerdos</h2>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="notificaciones" name="notificaciones" value="si" checked>
-                    <label class="form-check-label" for="notificaciones">¿Desea recibir notificaciones por correo electrónico?</label>
+                    <input type="checkbox" class="form-check-input" id="notificaciones" name="notificaciones" value="si"
+                        checked>
+                    <label class="form-check-label" for="notificaciones">¿Desea recibir notificaciones por correo
+                        electrónico?</label>
                 </div>
 
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos" value="aceptado" required>
+                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos" value="aceptado"
+                        required>
                     <label class="form-check-label" for="terminos">Acepto los términos y condiciones. (*)</label>
                     <div class="invalid-feedback">Debes aceptar los términos y condiciones para continuar.</div>
                 </div>
-                
+
                 <h2 class="section-heading">5. Encuesta Adicional</h2>
                 <div class="mb-3">
-                    <label for="calificacion" class="form-label">Calificación de eventos anteriores (1 a 10): <span id="valorCalificacion">5</span></label>
-                    <input type="range" class="form-range" min="1" max="10" step="1" id="calificacion" name="calificacion" value="5">
+                    <label for="calificacion" class="form-label">Calificación de eventos anteriores (1 a 10): <span
+                            id="valorCalificacion">5</span></label>
+                    <input type="range" class="form-range" min="1" max="10" step="1" id="calificacion"
+                        name="calificacion" value="5">
                 </div>
 
                 <div class="mb-3">
                     <label for="comentarios" class="form-label">Comentarios adicionales</label>
-                    <textarea class="form-control" id="comentarios" name="comentarios" rows="3" placeholder="¿Tienes alguna sugerencia o nota especial?"></textarea>
+                    <textarea class="form-control" id="comentarios" name="comentarios" rows="3"
+                        placeholder="¿Tienes alguna sugerencia o nota especial?"></textarea>
                 </div>
 
                 <h2 class="section-heading">6. Adjuntar Archivo</h2>
                 <div class="mb-3">
-                    <label for="adjunto" class="form-label">Adjuntar un archivo (ej. ID de estudiante para entrada)</label>
+                    <label for="adjunto" class="form-label">Adjuntar un archivo (ej. ID de estudiante para
+                        entrada)</label>
                     <input class="form-control" type="file" id="adjunto" name="adjunto">
                 </div>
 
@@ -210,25 +165,28 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <script>
-        // 1. Validaciones de Bootstrap
+        //Validaciones de bootstrap
         (function () {
             'use strict'
             var forms = document.querySelectorAll('.needs-validation')
             Array.prototype.slice.call(forms)
                 .forEach(function (form) {
                     form.addEventListener('submit', function (event) {
-                        // Validación de Confirmación de Contraseña
+                        //Validación de confirmación de contraseña
                         var password = document.getElementById('password');
                         var confirmPassword = document.getElementById('confirmPassword');
                         if (password.value !== confirmPassword.value) {
                             confirmPassword.setCustomValidity('Las contraseñas no coinciden.');
                         } else {
-                            confirmPassword.setCustomValidity(''); // Restablecer el mensaje de error
+                            confirmPassword.setCustomValidity('');
                         }
 
+                        //Prevenir envío si hay errores
                         if (!form.checkValidity()) {
                             event.preventDefault()
                             event.stopPropagation()
@@ -238,12 +196,13 @@
                     }, false)
                 })
         })()
-        
-        // 2. Mostrar el valor del Range Slider
-        document.getElementById('calificacion').addEventListener('input', function() {
+
+        //Mostrar el valor del range slider
+        document.getElementById('calificacion').addEventListener('input', function () {
             document.getElementById('valorCalificacion').textContent = this.value;
         });
 
     </script>
 </body>
+
 </html>

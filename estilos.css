@@ -1,0 +1,103 @@
+/*Estilos generales del cuerpo en modo oscuro*/
+body {
+  background-color: #121212;
+  color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/*Contenedor central del formulario y recibo*/
+.form-container,
+.recibo-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #212529;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+/*Estilo para los títulos de las secciones*/
+.section-heading {
+  border-left: 5px solid #dc3545;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+/*Estilos específicos del recibo*/
+.recibo-header {
+  color: #dc3545;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+/*Tarjeta dentro del recibo*/
+.recibo-card {
+  border: 1px solid #dc3545;
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+.recibo-card .card-header {
+  background-color: #dc3545 !important;
+  color: white;
+}
+.recibo-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #495057;
+  display: flex;
+  justify-content: space-between;
+}
+.recibo-item-label {
+  font-weight: 600;
+  color: #adb5bd;
+}
+.recibo-item-value {
+  color: #f8f9fa;
+}
+/*Cambio clave para el texto oculto en tarjeta*/
+.recibo-card .text-muted {
+  color: #f8f9fa !important;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.recibo-container > .text-muted {
+  color: #adb5bd !important;
+}
+/*Personalización de inputs para fondo oscuro*/
+.form-control,
+.form-select,
+.form-control:focus,
+.form-select:focus,
+.form-control::placeholder {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+/*Efecto de foco en color rojo*/
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
+  border-color: #dc3545;
+}
+/*Color blanco para las etiquetas*/
+.form-label {
+  color: #f8f9fa;
+}
+/*Estilos para botones y estados hover*/
+.btn-primary {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+/*Clases de utilidad para colores de texto*/
+.text-primary {
+  color: #dc3545 !important;
+}
+.text-secondary {
+  color: #adb5bd !important;
+}
